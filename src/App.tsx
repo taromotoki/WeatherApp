@@ -23,7 +23,7 @@ function App() {
     });
     const getWeather = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        fetch(`https://api.weatherapi.com/v1/current.json?key=8f61f7f24bf64902872235457221409&q=London&aqi=no`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=8f61f7f24bf64902872235457221409&q=${city}&aqi=no`)
             .then(res => res.json())
             .then(data => {
                 setResults({
